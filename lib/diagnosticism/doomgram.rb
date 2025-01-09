@@ -36,6 +36,9 @@
 # ######################################################################## #
 
 
+=begin
+=end
+
 module Diagnosticism
 
 # Decimal Order-Of-Magnitude frequency histoGRAM
@@ -201,6 +204,68 @@ class DOOMGram
   def push_event_time_s(time_in_s)
 
     push_event_time_ns time_in_s * 1_000_000_000
+  end
+
+  # Converts to string form according to given options
+  #
+  # === Signature
+  #
+  # * *Parameters:*
+  #   - +options+ (+Hash+, +Integer+) Combination of flags (with behaviour as described below for the +flags+ option), or an options hash;
+  #
+  # * *Options:*
+  #   - +overflow_character+ (+String+) A string (of length 1) that specifies the symbol for counts outside the available range. Defaults to +'*'+;
+  #   - +range+ (+String+) A string whose characters specificy the symbols to use for counts in orders of magnitude. Defaults to +'abcdefghijklmnopqrstuvwxyz'+, which caters to the counts 1-9 => +'a', 10-99 => +'b'+, 100-999 => +'c'+, ... 10^25-(10^26-1) => +'z'+;
+  #   - +zero_character+ (+String+) A string (of length 1) that specifies the symbol for a count of 0. Defaults to +' '+;
+  #
+  # === Return
+  # (+String+) A string (of length 12) containing symbols representing the counts in the ranges 1ns, 10ns, ..., 10s, 100+s.
+  def to_strip **options
+
+    ch_zero     = options[:zero_character] || options[:zero_char] || '_'
+    ch_overflow = options[:overflow_character] || options[:overflow_char] || '*'
+    range_chars = options[:range] || 'abcdefghijklmnopqrstuvwxyz'
+
+    counts = [
+      num_events_in_1ns,
+      num_events_in_10ns,
+      num_events_in_100ns,
+      num_events_in_1us,
+      num_events_in_10us,
+      num_events_in_100us,
+      num_events_in_1ms,
+      num_events_in_10ms,
+      num_events_in_100ms,
+      num_events_in_1s,
+      num_events_in_10s,
+      num_events_ge_100s,
+    ]
+
+    s = ch_zero[0] * 12 # "____________"
+
+    counts.each_with_index do |count, index|
+
+      next if 0 == count
+
+      # TODO: get a faster way to count digits
+      oom = Math.log10(count).to_i
+
+      if oom < range_chars.size
+
+        s[index] = range_chars[oom]
+      else
+
+        s[index] = ch_overflow[0]
+      end
+    end
+
+    s
+  end
+
+  # Converts to string form according to default options
+  def to_s
+
+    to_strip
   end
 end # class DOOMGram
 end # module Diagnosticism

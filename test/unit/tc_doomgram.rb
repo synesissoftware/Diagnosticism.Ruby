@@ -36,6 +36,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 0, dg.num_events_in_1s
     assert_equal 0, dg.num_events_in_10s
     assert_equal 0, dg.num_events_ge_100s
+
+    assert_equal "____________", dg.to_s
+    assert_equal "____________", dg.to_strip
   end
 
   def test_single_timing_event
@@ -62,6 +65,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 0, dg.num_events_in_1s
     assert_equal 0, dg.num_events_in_10s
     assert_equal 0, dg.num_events_ge_100s
+
+    assert_equal "_______a____", dg.to_s
+    assert_equal "_______a____", dg.to_strip
   end
 
   def test_zero_time_events
@@ -91,6 +97,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 0, dg.num_events_in_1s
     assert_equal 0, dg.num_events_in_10s
     assert_equal 0, dg.num_events_ge_100s
+
+    assert_equal "____________", dg.to_s
+    assert_equal "____________", dg.to_strip
   end
 
   def test_uniform_spread_timings_1
@@ -129,6 +138,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 1, dg.num_events_in_1s
     assert_equal 1, dg.num_events_in_10s
     assert_equal 1, dg.num_events_ge_100s
+
+    assert_equal "aaaaaaaaaaaa", dg.to_s
+    assert_equal "aaaaaaaaaaaa", dg.to_strip
   end
 
   def test_uniform_spread_timings_2
@@ -166,6 +178,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 1, dg.num_events_in_1s
     assert_equal 1, dg.num_events_in_10s
     assert_equal 1, dg.num_events_ge_100s
+
+    assert_equal "aaaaaaaaaaaa", dg.to_s
+    assert_equal "aaaaaaaaaaaa", dg.to_strip
   end
 
   def test_uniform_spread_timings_3
@@ -203,6 +218,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 1, dg.num_events_in_1s
     assert_equal 1, dg.num_events_in_10s
     assert_equal 1, dg.num_events_ge_100s
+
+    assert_equal "aaaaaaaaaaaa", dg.to_s
+    assert_equal "aaaaaaaaaaaa", dg.to_strip
   end
 
   def test_uniform_spread_timings_4
@@ -237,6 +255,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 1, dg.num_events_in_1s
     assert_equal 1, dg.num_events_in_10s
     assert_equal 1, dg.num_events_ge_100s
+
+    assert_equal "___aaaaaaaaa", dg.to_s
+    assert_equal "___aaaaaaaaa", dg.to_strip
   end
 
   def test_several_distinct_timings
@@ -270,6 +291,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 1, dg.num_events_in_1s
     assert_equal 0, dg.num_events_in_10s
     assert_equal 1, dg.num_events_ge_100s
+
+    assert_equal "_a_aa___aa_a", dg.to_s
+    assert_equal "_a_aa___aa_a", dg.to_strip
   end
 
   def test_several_intersecting_timings
@@ -305,6 +329,9 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 2, dg.num_events_in_1s
     assert_equal 0, dg.num_events_in_10s
     assert_equal 1, dg.num_events_ge_100s
+
+    assert_equal "_a_aa___aa_a", dg.to_s
+    assert_equal "_a_aa___aa_a", dg.to_strip
   end
 
   def test_many_cumulative_timings
@@ -337,6 +364,11 @@ class Test_DoomGram < Test::Unit::TestCase
     assert_equal 10, dg.num_events_in_1s
     assert_equal 0, dg.num_events_in_10s
     assert_equal 0, dg.num_events_ge_100s
+
+    assert_equal "e__d__c__b__", dg.to_s
+    assert_equal "e__d__c__b__", dg.to_strip
+    assert_equal "*--d--c--b--", dg.to_strip(range: 'abcd', zero_character: '-')
+    assert_equal "#  #  c  b  ", dg.to_strip(range: 'abc', zero_character: ' ', overflow_character: '#')
   end
 end
 
