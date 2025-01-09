@@ -5,7 +5,7 @@
 # Purpose:  Version for Diagnosticism.Ruby library
 #
 # Created:  3rd January 2025
-# Updated:  3rd January 2025
+# Updated:  9th January 2025
 #
 # Home:     http://github.com/synesissoftware/Diagnosticism.Ruby
 #
@@ -50,7 +50,7 @@
 module Diagnosticism
 
   # Current version of the Diagnosticism library
-  VERSION           = '0.0.0'
+  VERSION           = '0.1.0'
 
   private
   VERSION_PARTS_    = VERSION.split(/[.]/).collect { |n| n.to_i } # :nodoc:
@@ -62,6 +62,7 @@ module Diagnosticism
   # Revision version of the Diagnosticism library
   VERSION_REVISION  = VERSION_PARTS_[2] # :nodoc:
 end # module Diagnosticism
+
 
 # ############################## end of file ############################# #
 
