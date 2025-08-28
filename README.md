@@ -1,13 +1,17 @@
-# Diagnosticism <!-- omit in toc -->
+# Diagnosticism.Ruby <!-- omit in toc -->
 
-T.B.C.
-
+![Language](https://img.shields.io/badge/Ruby-CC342D?style=flat&logo=ruby&logoColor=white)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Gem Version](https://badge.fury.io/rb/diagnosticism.svg)](https://badge.fury.io/rb/diagnosticism)
+[![Last Commit](https://img.shields.io/github/last-commit/synesissoftware/Diagnosticism.Ruby)](https://github.com/synesissoftware/Diagnosticism.Ruby/commits/master)
+
+Basic diagnostic facilities, for Ruby
 
 
 ## Introduction
 
-T.B.C.
+**Diagnosticism** provides low-level diagnostics facilities to support library programming. The first **Diagnosticism** library was a C library with a C++ wrapper. There have been several implementations in other languages. **Diagnosticism.Ruby** is the
+Ruby version.
 
 
 ## Table of Contents <!-- omit in toc -->
@@ -19,6 +23,8 @@ T.B.C.
 - [Project Information](#project-information)
 	- [Where to get help](#where-to-get-help)
 	- [Contribution guidelines](#contribution-guidelines)
+	- [Dependencies](#dependencies)
+		- [Development Dependencies](#development-dependencies)
 	- [Related projects](#related-projects)
 	- [License](#license)
 
@@ -28,40 +34,49 @@ T.B.C.
 Install via **gem** as in:
 
 ```
-gem install diagnositicm
+gem install diagnosticism
 ```
 
 or add it to your `Gemfile`.
 
 
-T.B.C.
-
-
-
-
 ## Components
+
+
+
 
 T.B.C.
 
 
 ## Examples
 
-T.B.C.
+Examples are provided in the ```examples``` directory, along with a markdown description for each. A detailed list TOC of them is provided in [EXAMPLES.md](./EXAMPLES.md).
 
 
 ## Project Information
+
 
 ### Where to get help
 
 [GitHub Page](https://github.com/synesissoftware/Diagnosticism.Ruby "GitHub Page")
 
+
 ### Contribution guidelines
 
 Defect reports, feature requests, and pull requests are welcome on https://github.com/synesissoftware/Diagnosticism.Ruby.
 
+
+### Dependencies
+
+* [**xqsr3**](https://github.com/synesissoftware/xqsr3/)
+
+
 ### Related projects
 
-T.B.C.
+* [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism/)
+* [**Diagnosticism.Go**](https://github.com/synesissoftware/Diagnosticism.Go/)
+* [**Diagnosticism.Python**](https://github.com/synesissoftware/Diagnosticism.Python/)
+
 
 
 ### License
