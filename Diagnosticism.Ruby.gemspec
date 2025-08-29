@@ -26,7 +26,7 @@ END_DESC
 
   spec.files = Dir[ 'Rakefile', '{bin,examples,lib,man,spec,test}/**/*', 'README*', 'LICENSE*' ] & `git ls-files -z`.split("\0")
 
-  spec.add_development_dependency 'xqsr3', [ '~> 0.39' ]
+  spec.add_development_dependency 'xqsr3', [ '~> 0.39', '>= 0.39.4' ]
 end
 
 

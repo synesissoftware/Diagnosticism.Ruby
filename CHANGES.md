@@ -1,6 +1,12 @@
 # **Diagnosticism** Changes <!-- omit in toc -->
 
 
+## 0.1.2 - 29th August 2025
+
+* GitHub Actions;
+* Rakefile;
+
+
 ## 0.1.1 - 6th March 2025
 
 * warnings;
