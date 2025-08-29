@@ -68,6 +68,9 @@ jobs:
     - name: Installing dependencies
       run: bundle install
 
+    - name: Installing dependencies explicitly
+      run: gem install xqsr3
+
     - name: List gems
       run: gem list
 
