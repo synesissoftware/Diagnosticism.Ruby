@@ -68,5 +68,8 @@ jobs:
     - name: Installing dependencies
       run: bundle install
 
+    - name: List gems
+      run: gem list
+
     - name: Run tests
       run: rake test
