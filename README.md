@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Gem Version](https://badge.fury.io/rb/diagnosticism.svg)](https://badge.fury.io/rb/diagnosticism)
 [![Last Commit](https://img.shields.io/github/last-commit/synesissoftware/Diagnosticism.Ruby)](https://github.com/synesissoftware/Diagnosticism.Ruby/commits/master)
+[![Ruby](https://github.com/synesissoftware/Diagnosticism.Ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/synesissoftware/Diagnosticism.Ruby/actions/workflows/ruby.yml)
 
 Basic diagnostic facilities, for Ruby
 
@@ -24,7 +25,6 @@ Ruby version.
 	- [Where to get help](#where-to-get-help)
 	- [Contribution guidelines](#contribution-guidelines)
 	- [Dependencies](#dependencies)
-		- [Development Dependencies](#development-dependencies)
 	- [Related projects](#related-projects)
 	- [License](#license)
 
