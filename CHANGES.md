@@ -1,4 +1,12 @@
-# **Diagnosticism** Changes <!-- omit in toc -->
+# Diagnosticism.Ruby - Changes <!-- omit in toc -->
+
+
+## 0.1.2 - 29th August 2025
+
+* GitHub Actions;
+* Rakefile;
+* boilerplate;
+* updated **run_all_unit_tests.sh** (from https://github.com/synesissoftware/misc-dev-scripts);
 
 
 ## 0.1.1 - 6th March 2025
