@@ -42,8 +42,15 @@ or add it to your `Gemfile`.
 
 ## Components
 
+The main component of **Diagnosticism.Ruby** today is:
 
-T.B.C.
+* **`Diagnosticism::DOOMGram`** — a **D**ecimal **O**rder-**O**f-**M**agnitude histo**G**ram that records event durations in twelve logarithmic buckets (1ns … 100s+);
+
+Require it as `require 'diagnosticism/doomgram'`. Significant facilities include:
+
+* push helpers — `push_event_time_ns`, `push_event_time_us`, `push_event_time_ms`, `push_event_time_s`;
+* aggregate readers — `event_count`, `total_event_time_ns`, `min_event_time_ns`, `max_event_time_ns`, plus per-bucket counts (`num_events_in_1ns` … `num_events_ge_100s`);
+* presentation — `to_strip` (12-character magnitude strip) and `to_s`;
 
 
 ## Examples
