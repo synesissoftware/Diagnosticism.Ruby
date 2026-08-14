@@ -1,13 +1,19 @@
+PATH
+  remote: .
+  specs:
+    diagnosticism (0.1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    xqsr3 (0.39.4.1)
+    xqsr3 (0.39.5)
 
 PLATFORMS
   arm64-darwin-25
   ruby
 
 DEPENDENCIES
+  diagnosticism!
   xqsr3 (~> 0.39, >= 0.39.4)
 
 BUNDLED WITH
