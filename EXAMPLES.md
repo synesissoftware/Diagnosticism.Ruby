@@ -1,4 +1,4 @@
-# Diagnosticism.Go - Examples <!-- omit in toc -->
+# Diagnosticism.Ruby - Examples <!-- omit in toc -->
 
 |Name|Source & Description|Summary|
 |---|---|---|
