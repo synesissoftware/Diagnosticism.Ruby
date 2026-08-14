@@ -4,7 +4,7 @@
 ## 0.1.2 - 29th August 2025
 
 * GitHub Actions;
-* Rakefile;
+* **Rakefile**;
 * boilerplate;
 * updated **run_all_unit_tests.sh** (from https://github.com/synesissoftware/misc-dev-scripts);
 
@@ -24,5 +24,5 @@
 * initial commit;
 
 
-<!-- ########################### end of file ########################### -->
 
+<!-- ########################### end of file ########################### -->
