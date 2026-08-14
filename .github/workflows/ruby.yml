@@ -7,24 +7,36 @@
 
 #
 # Created: 29th August 2025
-# Updated: 29th August 2025
+# Updated: 15th August 2026
 #
 
 name: Ruby
 
 on:
   push:
-    branches: [ "master", "dev", "gha" ]
+    branches:
+      - master
+      - dev
+      - boilerplate
+      - idiomatic
+      - rc1
+      - rc2
+      - rc3
   pull_request:
-    branches: [ "master", "dev", "gha" ]
 
 permissions:
   contents: read
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   test:
 
     strategy:
+      fail-fast: false
+
       matrix:
         os:
           - macos-latest
@@ -46,10 +58,10 @@ jobs:
             ruby-version: '2.5'
           - os: ubuntu-latest
             ruby-version: '2.4'
+          - os: ubuntu-latest
+            ruby-version: '2.0'
           - os: windows-latest
             ruby-version: mingw
-          # - os: windows-latest
-          #   ruby-version: ucrt
 
     runs-on: ${{ matrix.os }}
 
