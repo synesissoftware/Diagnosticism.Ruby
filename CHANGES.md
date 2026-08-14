@@ -3,7 +3,7 @@
 
 ## 0.1.3 - 15th August 2026
 
-T.B.C.
+* added `# frozen_string_literal: true` to all **lib/** sources;
 
 
 ## 0.1.2 - 29th August 2025
