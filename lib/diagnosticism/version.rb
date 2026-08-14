@@ -5,13 +5,13 @@
 # Purpose:  Version for Diagnosticism.Ruby library
 #
 # Created:  3rd January 2025
-# Updated:  29th August 2025
+# Updated:  15th August 2026
 #
 # Home:     http://github.com/synesissoftware/Diagnosticism.Ruby
 #
 # Author:   Matthew Wilson
 #
-# Copyright (c) 2025, Matthew Wilson and Synesis Information Systems
+# Copyright (c) 2025-2026, Matthew Wilson and Synesis Information Systems
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -50,7 +50,7 @@
 module Diagnosticism
 
   # Current version of the Diagnosticism library
-  VERSION           = '0.1.2'
+  VERSION           = '0.1.3'
 
   private
   VERSION_PARTS_    = VERSION.split(/[.]/).collect { |n| n.to_i } # :nodoc:
