@@ -34,6 +34,13 @@ END_DESC
 
   spec.required_ruby_version = [ '>= 2.0', '< 4' ]
 
+  spec.metadata = {
+    'bug_tracker_uri' => 'https://github.com/synesissoftware/Diagnosticism.Ruby/issues',
+    'changelog_uri' => 'https://github.com/synesissoftware/Diagnosticism.Ruby/blob/master/CHANGES.md',
+    'homepage_uri' => 'https://github.com/synesissoftware/Diagnosticism.Ruby',
+    'source_code_uri' => 'https://github.com/synesissoftware/Diagnosticism.Ruby',
+  }
+
   spec.files        = Dir[ 'Rakefile', '{bin,examples,lib,man,spec,test}/**/*', 'README*', 'LICENSE*' ] & `git ls-files -z`.split("\0")
 
   spec.add_development_dependency "xqsr3", [ '>= 0.39.5', '< 1.0' ]
