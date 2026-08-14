@@ -1,14 +1,19 @@
 # Diagnosticism.Ruby - TODO <!-- omit in toc -->
 
 
-## Table of Contents <!-- omit in toc -->
-
-- [General:](#general)
-
-
-## General:
+## Functional improvements
 
 * \<none>
+
+
+## Performance improvements
+
+* \<none>
+
+
+## Packaging improvements
+
+* [ ] Rename gemspec so the filename stem matches `spec.name` (`Diagnosticism.Ruby.gemspec` → **diagnosticism.gemspec**);
 
 
 <!-- ########################### end of file ########################### -->
