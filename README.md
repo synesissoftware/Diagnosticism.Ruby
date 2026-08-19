@@ -9,12 +9,6 @@ Basic diagnostic facilities, for Ruby
 [![Ruby](https://github.com/synesissoftware/Diagnosticism.Ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/synesissoftware/Diagnosticism.Ruby/actions/workflows/ruby.yml)
 
 
-## Introduction
-
-**Diagnosticism** provides low-level diagnostics facilities to support library programming. The first **Diagnosticism** library was a C library with a C++ wrapper. There have been several implementations in other languages. **Diagnosticism.Ruby** is the
-Ruby version.
-
-
 ## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
@@ -22,11 +16,23 @@ Ruby version.
 - [Components](#components)
 - [Examples](#examples)
 - [Project Information](#project-information)
-	- [Where to get help](#where-to-get-help)
-	- [Contribution guidelines](#contribution-guidelines)
-	- [Dependencies](#dependencies)
-	- [Related projects](#related-projects)
-	- [License](#license)
+  - [Where to get help](#where-to-get-help)
+  - [Contribution guidelines](#contribution-guidelines)
+  - [Dependencies](#dependencies)
+    - [Efferent (fan-out)](#efferent-fan-out)
+      - [Runtime Dependencies (aka "Normal Dependencies")](#runtime-dependencies-aka-normal-dependencies)
+      - [Development Dependencies](#development-dependencies)
+    - [Afferent (fan-in)](#afferent-fan-in)
+      - [Runtime dependents](#runtime-dependents)
+      - [Development dependents](#development-dependents)
+  - [Related projects](#related-projects)
+  - [License](#license)
+
+
+## Introduction
+
+**Diagnosticism** provides low-level diagnostics facilities to support library programming. The first **Diagnosticism** library was a C library with a C++ wrapper. There have been several implementations in other languages. **Diagnosticism.Ruby** is the
+Ruby version.
 
 
 ## Installation
@@ -38,6 +44,13 @@ gem install diagnosticism
 ```
 
 or add it to your `Gemfile`.
+
+Use is via specific APIs. For example, in order to use the ``DOOMGram``
+class you would ``require`` the source file, as in:
+
+```Ruby
+require 'diagnosticism/doomgram'
+```
 
 
 ## Components
@@ -73,14 +86,46 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 
 ### Dependencies
 
-* [**xqsr3**](https://github.com/synesissoftware/xqsr3/)
+
+#### Efferent (fan-out)
+
+Libraries upon which **Diagnosticism.Ruby** depends:
+
+
+##### Runtime Dependencies (aka "Normal Dependencies")
+
+* \<none>;
+
+
+##### Development Dependencies
+
+* [**rake**](https://rubygems.org/gems/rake);
+* [**test-unit**](https://rubygems.org/gems/test-unit);
+* [**xqsr3**](https://github.com/synesissoftware/xqsr3);
+
+
+#### Afferent (fan-in)
+
+Projects that depend on **Diagnosticism.Ruby**:
+
+
+##### Runtime dependents
+
+* \<none>;
+
+
+##### Development dependents
+
+* \<none>;
 
 
 ### Related projects
 
-* [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism/)
-* [**Diagnosticism.Go**](https://github.com/synesissoftware/Diagnosticism.Go/)
-* [**Diagnosticism.Python**](https://github.com/synesissoftware/Diagnosticism.Python/)
+* [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism/) — C library with a C++ wrapper;
+* [**Diagnosticism.Go**](https://github.com/synesissoftware/Diagnosticism.Go/);
+* [**Diagnosticism.NET**](https://github.com/synesissoftware/Diagnosticism.NET/);
+* [**Diagnosticism.Python**](https://github.com/synesissoftware/Diagnosticism.Python/);
+* [**Diagnosticism.Rust**](https://github.com/synesissoftware/Diagnosticism.Rust/);
 
 
 ### License
@@ -89,4 +134,3 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 
 
 <!-- ########################### end of file ########################### -->
-

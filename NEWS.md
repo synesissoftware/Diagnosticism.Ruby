@@ -2,6 +2,7 @@
 
 | Date             | News Item                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------------- |
+| 20th August 2026 | [**Diagnosticism.Ruby** 0.1.4](https://github.com/synesissoftware/Diagnosticism.Ruby/releases/tag/0.1.4) |
 | 15th August 2026 | [**Diagnosticism.Ruby** 0.1.3](https://github.com/synesissoftware/Diagnosticism.Ruby/releases/tag/0.1.3) |
 | 29th August 2025 | [**Diagnosticism.Ruby** 0.1.2](https://github.com/synesissoftware/Diagnosticism.Ruby/releases/tag/0.1.2) |
 | 6th March 2025   | Diagnosticism.Ruby 0.1.1 released                                                                 |
