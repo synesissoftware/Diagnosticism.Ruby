@@ -11,6 +11,7 @@
 * updated **run_all_unit_tests.sh** (from https://github.com/synesissoftware/misc-dev-scripts) to skip **tput** when **$TERM** is unset or stdout is not a TTY;
 * **README.md**: tagline before badges; TOC before Introduction; Dependencies (Efferent / Afferent); related projects;
 * added **examples/doomgram** and catalogued it in **EXAMPLES.md**;
+* normalised **NEWS.md** version rows to **Diagnosticism.Ruby**;
 
 
 ## 0.1.3 - 15th August 2026
