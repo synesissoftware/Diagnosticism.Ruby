@@ -1,10 +1,11 @@
+# frozen_string_literal: true
 # ######################################################################## #
 # File:     doomgram.rb
 #
 # Purpose:  Definition of the `DOOMGram` class.
 #
 # Created:  9th January 2025
-# Updated:  9th January 2025
+# Updated:  15th August 2026
 #
 # Author:   Matthew Wilson
 #
