@@ -1,10 +1,10 @@
 # ######################################################################## #
-# File:     Diagnosticism.Ruby.gemspec
+# File:     diagnosticism.gemspec
 #
 # Purpose:  Gemspec for Diagnosticism.Ruby library
 #
 # Created:  3rd January 2025
-# Updated:  15th August 2026
+# Updated:  20th August 2026
 #
 # ######################################################################## #
 
@@ -17,10 +17,12 @@ require 'diagnosticism/version'
 Gem::Specification.new do |spec|
 
   spec.name         = 'diagnosticism'
+  spec.summary      = 'Basic diagnostic facilities, for Ruby'
   spec.version      = Diagnosticism::VERSION
-  spec.summary      = 'diagnosticism'
   spec.description  = <<END_DESC
-Diagnostic facilities, for Ruby
+Basic diagnostic facilities, for Ruby. Diagnosticism.Ruby provides
+low-level diagnostics components, including a decimal order-of-magnitude
+histogram (DOOMGram) for recording event durations.
 END_DESC
 
   spec.authors      = [
@@ -32,7 +34,7 @@ END_DESC
   spec.homepage     = 'https://github.com/synesissoftware/Diagnosticism.Ruby'
   spec.license      = 'BSD-3-Clause'
 
-  spec.required_ruby_version = [ '>= 2.0', '< 4' ]
+  spec.required_ruby_version = [ '>= 2.0' ]
 
   spec.metadata = {
     'bug_tracker_uri' => 'https://github.com/synesissoftware/Diagnosticism.Ruby/issues',
@@ -41,7 +43,25 @@ END_DESC
     'source_code_uri' => 'https://github.com/synesissoftware/Diagnosticism.Ruby',
   }
 
-  spec.files        = Dir[ 'Rakefile', '{bin,examples,lib,man,spec,test}/**/*', 'README*', 'LICENSE*' ] & `git ls-files -z`.split("\0")
+  spec.files = Dir[
+    'Rakefile',
+    '{bin,examples,lib,man,spec,test}/**/*',
+    'AUTHORS*',
+    'CHANGES*',
+    'CONTRIBUTING*',
+    'EXAMPLES*',
+    'FAQ*',
+    'INSTALL*',
+    'LICENSE*',
+    'NEWS*',
+    'README*',
+    'SECURITY*',
+    'TODO*',
+  ] & `git ls-files -z`.split("\0")
+  spec.files -= [
+    '.ruby-version',
+    'Gemfile.lock',
+  ]
 
   spec.add_development_dependency "xqsr3", [ '>= 0.39.5', '< 1.0' ]
 end
