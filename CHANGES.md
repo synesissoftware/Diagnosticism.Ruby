@@ -1,6 +1,12 @@
 # Diagnosticism.Ruby - Changes <!-- omit in toc -->
 
 
+## 0.1.5 - 30th August 2026
+
+* updated GitHub Actions checkout references to **v7**;
+* corrected shared project URL metadata in **diagnosticism.gemspec**;
+
+
 ## 0.1.4 - 20th August 2026
 
 * library source **Home:** URLs now use `https`;
